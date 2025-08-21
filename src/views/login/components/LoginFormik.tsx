@@ -21,7 +21,7 @@ const LoginFormik: FC<LoginFormProps> = ({ children }) => {
       };
 
       const { data }: { data: IResponse<User> } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/sign-in`,
         payload
       );
 

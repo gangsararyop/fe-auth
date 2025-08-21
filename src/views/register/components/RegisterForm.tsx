@@ -15,6 +15,8 @@ const RegisterForm = () => {
 
       <Input {...getFieldProps("email")} placeholder="Email" />
 
+      <Input {...getFieldProps("role")} placeholder="Role" />
+
       <div className="relative flex items-center">
         <Input
           {...getFieldProps("password")}

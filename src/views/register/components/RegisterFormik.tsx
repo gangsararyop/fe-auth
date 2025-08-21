@@ -15,10 +15,11 @@ const RegisterFormik: FC<RegisterFormikProps> = ({ children }) => {
         name: values.name,
         email: values.email,
         password: values.password,
+        role: values.role,
       };
 
       await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/sign-up`,
         payload
       );
 
@@ -34,6 +35,7 @@ const RegisterFormik: FC<RegisterFormikProps> = ({ children }) => {
         name: "",
         email: "",
         password: "",
+        role: null,
         showPassword: false,
       }}
       onSubmit={onSubmit}
